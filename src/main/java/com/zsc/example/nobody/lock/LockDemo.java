@@ -1,4 +1,4 @@
-package com.zsc.example.nobody;
+package com.zsc.example.nobody.lock;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import sun.nio.ch.ThreadPool;

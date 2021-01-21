@@ -1,5 +1,7 @@
 package com.zsc.example.nobody.stream;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.bean.copier.CopyOptions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -183,13 +185,35 @@ public class StreamDdemo1 {
          * 按照字符长度排序
          */
         Arrays.stream(arr1).sorted((x,y)->{
-            if (x.length()>y.length())
+            if (x.length()>y.length()){
                 return 1;
-            else if (x.length()<y.length())
+            }
+
+            else if (x.length()<y.length()) {
                 return -1;
-            else
+            }
+            else {
                 return 0;
+            }
         }).forEach(System.out::println);
         Arrays.stream(arr1).sorted(Comparator.comparing(String::length)).forEach(System.out::println);
     }
+
+
+    @Test
+    public void copy(){
+        Student s = new Student();
+        s.setName("zsc");
+
+        Student s2 = new Student();
+        s2.setAge(10);
+        s2.setScore(1);
+//        BeanUtil.copyProperties(s,s2);
+//        System.out.println(s2);
+
+       BeanUtil.copyProperties(s,s2, CopyOptions.create().setIgnoreNullValue(true).setIgnoreError(true));
+        System.out.println(s2);
+
+    }
+
 }

@@ -15,6 +15,7 @@ public class Student implements Serializable {
     private int age;
     private int type;
     private Integer score;
+    Student(){}
     Student(String name, int age ){
         this.name = name;
         this.age = age;
