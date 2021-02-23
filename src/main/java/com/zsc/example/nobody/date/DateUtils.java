@@ -3,6 +3,8 @@ package com.zsc.example.nobody.date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -50,7 +52,28 @@ public class DateUtils {
         return days;
     }
 
+    /**
+     * 获取当天日期  2020-01-01
+     * @return
+     */
+    public static String getToday(){
+        LocalDate today = LocalDate.now();
+        return today.toString();
+    }
+
+
     public static void main(String[] args) {
+        System.out.println(getToday());
         System.out.println(getDays("20200201", "20200303"));
+
+        LocalDate today=LocalDate. now();
+        int year=today.getYear();
+        int month=today.getMonthValue();
+        int day=today.getDayOfMonth();
+
+        LocalTime time = LocalTime.now();
+        System.out.println(time);
+
+        System.out.println(time.plusHours(3));
     }
 }
