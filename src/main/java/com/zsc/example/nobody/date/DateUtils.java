@@ -3,6 +3,7 @@ package com.zsc.example.nobody.date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -61,6 +62,14 @@ public class DateUtils {
         return today.toString();
     }
 
+    /**
+     * 获取当前时间戳
+     * @return
+     */
+    public static Long getTimestamp() {
+        Instant timestamp = Instant.now();
+        return timestamp.toEpochMilli();
+    }
 
     public static void main(String[] args) {
         System.out.println(getToday());
@@ -75,5 +84,6 @@ public class DateUtils {
         System.out.println(time);
 
         System.out.println(time.plusHours(3));
+        System.out.println(getTimestamp());
     }
 }

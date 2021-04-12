@@ -1,14 +1,9 @@
 package com.zsc.example.nobody_demo;
 
-import com.zsc.example.nobody.Application;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.annotation.Resource;
 
 //@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+//@SpringBootTest(classes = Application.class)
 class ApplicationTests {
 //    @Resource
 //    public UserService userService;

@@ -48,8 +48,8 @@ public class DubboConfig {
         DubboConfig d = new DubboConfig();
         d.server();
         d.consumer();
-        CountDownLatch countDownLatch = new CountDownLatch(1);
-        countDownLatch.await();
+//        CountDownLatch countDownLatch = new CountDownLatch(1);
+//        countDownLatch.await();
     }
 
 }

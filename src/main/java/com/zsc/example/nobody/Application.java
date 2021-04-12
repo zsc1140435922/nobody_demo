@@ -17,14 +17,6 @@ import java.util.ServiceLoader;
  */
 @SpringBootApplication
 public class Application {
-//    @Autowired
-//    private RestTemplateBuilder builder;
-//    @Bean
-//    public RestTemplate restTemplate() {
-//        return builder.build();
-//    }
-
-
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
