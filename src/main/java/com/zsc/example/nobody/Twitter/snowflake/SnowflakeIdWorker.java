@@ -117,14 +117,15 @@ public class SnowflakeIdWorker {
         long a = (timestamp - twepoch) << timestampLeftShift;
         long b = datacenterId << datacenterIdShift;
         long c = workerId << workerIdShift;
-        System.out.println(a);
-        System.out.println(Long.toBinaryString(a));
-        System.out.println(b);
-        System.out.println(Long.toBinaryString(b));
-        System.out.println(c);
-        System.out.println(Long.toBinaryString(c));
-        System.out.println(sequence);
-        System.out.println(a+b+c+sequence);
+//        System.out.println("-----");
+//        System.out.println("a:"+a);
+//        System.out.println(Long.toBinaryString(a));
+//        System.out.println("b:"+b);
+//        System.out.println(Long.toBinaryString(b));
+//        System.out.println("c:"+c);
+//        System.out.println(Long.toBinaryString(c));
+//        System.out.println("sequence:"+sequence);
+//        System.out.println(a+b+c+sequence);
         //位移相应的位置  下面的计算等于求和
         //移位并通过或运算拼到一起组成64位的ID
 //        return ((timestamp - twepoch) << timestampLeftShift) //
@@ -162,15 +163,15 @@ public class SnowflakeIdWorker {
         long start = System.currentTimeMillis();
         System.out.println(start);
 //        System.out.println(System.currentTimeMillis());
-//        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             long id = idWorker.nextId();
             System.out.println(Long.toBinaryString(id));
             System.out.println(id);
-//        }
+        }
             
-            long a = 10<<0;
-            long b = 11<<0;
-            System.out.println(a|b);
+//            long a = 10<<0;
+//            long b = 11<<0;
+//            System.out.println(a|b);
     }
     
     

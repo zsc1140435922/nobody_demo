@@ -32,8 +32,6 @@ public class AddExcel {
         data1.add("666");
         datalist.add(data);
         datalist.add(data1);
-        String path = "/Users/zhangshichuang/yunzong/exportCsv/";
-        String fileName = "文件导出";
         List<Model> l = new ArrayList<>();
         Model model = new Model();
         model.setAge("11");

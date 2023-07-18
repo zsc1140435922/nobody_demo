@@ -27,7 +27,7 @@ public class InitService implements InitializingBean, DisposableBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        initGeoLiteCity();
+        //initGeoLiteCity();
     }
 
     private void initGeoLiteCity() {
